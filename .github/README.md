@@ -1,7 +1,3 @@
-## Roadmap
-- [ ] Download Latest Platform Specific Client Releases / Release Notes from Web Server
-- [ ] Login / Register Pages
-
 ## Setup
 1. Install dependencies with `yarn install`
 2. Start launcher with `yarn dev:start`
