@@ -1,12 +1,13 @@
 const { BrowserWindow, BrowserView } = require('electron').remote
+/* const { get, post } = require('request') */
 
 const elements = {
     switcher: id('switcher'),
-    btnClose: id('closeButton'),
-    stackLog: id('stackLogin'),
-    stackReg: id('stackRegister'),
-    btnLog: id('loginButton'),
-    btnReg: id('registerButton'),
+    btnClose: id('btnClose'),
+    tabLog: id('tabLogin'),
+    tabReg: id('tabRegister'),
+    btnLog: id('btnLogin'),
+    btnReg: id('btnRegister'),
 }
 
 elements.btnClose.addEventListener('click', () => {
@@ -18,13 +19,32 @@ elements.switcher.addEventListener('click', () => {
     switch (elements.switcher.innerHTML)
     {
         case 'Register':
-            elements.stackLog.style = 'display: none;'
-            elements.stackReg.style = ''
+            elements.tabLog.style = 'display: none;'
+            elements.tabReg.style = ''
             elements.switcher.innerHTML = 'Login'
             break
         default:
-            elements.stackReg.style = 'display: none;'
-            elements.stackLog.style = ''
+            elements.tabReg.style = 'display: none;'
+            elements.tabLog.style = ''
             elements.switcher.innerHTML = 'Register'
     }
 })
+
+/* Not implemented
+elements.btnLog.addEventListener('click', () => {
+    let username = ...
+    let password = ...
+    get(`http://webserver.com/login?usr=${username}&psw=${password}`, (err, res, body) => {
+        // Do something
+    })
+})
+
+elements.btnReg.addEventListener('click', () => {
+    let username = ...
+    let email    = ...
+    let password = ...
+    post(`http://webserver.com/register?usr=${username}&mail=${email}&psw=${password}`, (err, res, body) => {
+        // Do something
+    })
+})
+*/

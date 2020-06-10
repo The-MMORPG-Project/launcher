@@ -13,19 +13,20 @@
     <div id="header"></div> <!-- Draggable region -->
     <div id="title-bar-btns">
         <button id="switcher">Register</button>
-        <button id="closeButton"><i class="fa fa-times"></i></button>
+        <button id="btnClose"><i class="fa fa-times"></i></button>
     </div>
     <br><br><br><br>
     <main>
-        <div id="stackLogin">
+        <div id="tabLogin">
             <div class="entry">
                 <input id="username" placeholder="Username"/>
             </div>
             <div class="entry">
                 <input id="password" placeholder="Password"/>
             </div>
+            <button class="button" id="btnLogin">Login</button>
         </div>
-        <div id="stackRegister" style="display: none;">
+        <div id="tabRegister" style="display: none;">
             <div class="entry">
                 <input id="username" placeholder="Username"/>
             </div>
@@ -39,8 +40,8 @@
                 <input id="email" placeholder="Email"/>
             </div>
             <p class="sneaky">By registering, I agree to the <a>Terms of Service</a></p>
+            <button class="button" id="btnRegister">Register</button>
         </div>
-        <button class="button" id="nextButton">Next</div>
     </main>
     <script src="../script/utils.js"></script>
     <script src="../script/auth.js"></script>
