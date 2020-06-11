@@ -5,4 +5,13 @@
 *Note that you will need to setup the web server when testing out the 'Play' button (or temporarily comment out the communication to the web server and provide your own latest.zip test file)*
 
 ## Build
-Build the project's binaries with `yarn build:win` (`win` can be replaced with `linux` or `mac`, you can only build a platform if you're currently on that OS, for e.g. you can't build mac or linux on windows)
+Note that you cannot compile a Mac or Linux build on a Windows machine.
+
+### Windows
+`yarn build:win`
+
+### Mac
+`yarn build:mac`
+
+### Linux
+`yarn build:linux`
