@@ -7,7 +7,7 @@ const elements = {
     tabLog: id('tabLogin'),
     tabReg: id('tabRegister'),
     btnLog: id('btnLogin'),
-    btnReg: id('btnRegister'),
+    btnReg: id('btnRegister')
 }
 
 elements.btnClose.addEventListener('click', () => {
@@ -16,8 +16,7 @@ elements.btnClose.addEventListener('click', () => {
 
 elements.switcher.addEventListener('click', () => {
     /* Switch from login/register to register/login */
-    switch (elements.switcher.innerHTML)
-    {
+    switch (elements.switcher.innerHTML) {
         case 'Register':
             elements.tabLog.style = 'display: none;'
             elements.tabReg.style = ''
