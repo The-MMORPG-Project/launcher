@@ -1,4 +1,4 @@
-import { app, BrowserWindow, Menu, ipcMain } from 'electron'
+import { app, BrowserWindow, Menu, ipcMain, net } from 'electron'
 import { download } from 'electron-dl'
 import AdmZip from 'adm-zip'
 import isDev from 'electron-is-dev'
@@ -64,6 +64,27 @@ ipcMain.on('download-button', async (event, { url }) => {
 		onProgress
 	}
 	await download(win as any, url, options)
+})
+
+ipcMain.on('login', (event, arg) => {
+	const data = JSON.stringify(arg)
+	const request = net.request({
+		method: 'POST',
+		protocol: 'http:',
+		hostname: 'localhost',
+		port: 3000,
+		path: '/api/login'
+	})
+
+	request.setHeader('Content-Type', 'application/json')
+	request.end(data)
+
+	request.on('response', (response) => {
+		response.on('data', (data) => {
+			const parsed = JSON.parse(data.toString())
+			BrowserWindow.getFocusedWindow()?.webContents.send('status', parsed.status)
+		})
+	})
 })
 
 const onProgress = async (obj: { percent: number }) => {

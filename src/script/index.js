@@ -31,7 +31,7 @@ ipcRenderer.on('progress', (event, arg) => {
 })
 
 // Render the download progress bar
-function renderProgressBar() {
+const renderProgressBar = () => {
 	if (width >= 100) {
 		clearInterval(renderInterval)
 		downloading = false
