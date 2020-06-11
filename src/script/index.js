@@ -139,7 +139,7 @@ elements.launchButton.addEventListener('click', () => {
 	console.log(platform)
 
 	// Tell the main process what to download
-	ipcRenderer.send('download-button', { url: `http://${webIP}:${webPort}/api/releases/${platform}/${version}.zip` })
+	ipcRenderer.send('download-button', { url: `http://${webIP}:${webPort}/api/releases/client/${platform}/${version}.zip` })
 	
 	// Reset values
 	width = 0
