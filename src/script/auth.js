@@ -1,5 +1,4 @@
 const { BrowserWindow, BrowserView } = require('electron').remote
-/* const { get, post } = require('request') */
 
 const elements = {
     switcher: id('switcher'),
@@ -29,21 +28,21 @@ elements.switcher.addEventListener('click', () => {
     }
 })
 
-/* Not implemented
 elements.btnLog.addEventListener('click', () => {
-    let username = ...
+    console.log('login')
+    /*let username = ...
     let password = ...
     get(`http://webserver.com/login?usr=${username}&psw=${password}`, (err, res, body) => {
         // Do something
-    })
+    })*/
 })
 
 elements.btnReg.addEventListener('click', () => {
-    let username = ...
+    console.log('register')
+    /*let username = ...
     let email    = ...
     let password = ...
     post(`http://webserver.com/register?usr=${username}&mail=${email}&psw=${password}`, (err, res, body) => {
         // Do something
-    })
+    })*/
 })
-*/
