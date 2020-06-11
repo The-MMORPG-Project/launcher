@@ -7,11 +7,6 @@
 ## Build
 *Note that you cannot compile a Mac or Linux build on a Windows machine.*
 
-### Windows
-`yarn build:win`
-
-### Mac
-`yarn build:mac`
-
-### Linux
-`yarn build:linux`
+| Windows          | Mac              | Linux              |
+|:----------------:|:----------------:|:------------------:|
+| `yarn build:win` | `yarn build:mac` | `yarn build:linux` |
