@@ -2,13 +2,16 @@
 <html lang="en">
 
 <head>
-    <!-- https://electronjs.org/docs/tutorial/security#csp-meta-tag -->
+    <!--https://electronjs.org/docs/tutorial/security#csp-meta-tag-->
     <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
 
-    <!-- Style Sheets -->
+    <!--Styles-->
     <link rel="stylesheet" href="../css/universal.css" />
     <link rel="stylesheet" href="../css/auth.css" />
     <link rel="stylesheet" href="../packages/fontAwesome/css/all.min.css" />
+
+    <!--Scripts-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 <body>
@@ -33,6 +36,8 @@
             <button class="button" id="btnRegister">Register</button>
         </div>
     </main>
+
+    <!--Scripts-->
     <script src="../script/utils.js"></script>
     <script src="../script/auth.js"></script>
 </body>
