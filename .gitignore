@@ -3,6 +3,9 @@ obj/
 bin/
 .vs/
 
+# Visual Studio Code
+.vscode/
+
 # Node
 node_modules/
 yarn-error.log
